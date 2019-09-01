@@ -1,2 +1,2 @@
 # tradegov_cons_screening_list_api
-Access and retrieve data from trade.gov sanctions lists using the trade.gov API
+Use the trade.gov Consolidated Screening List API for compliance testing from IBM i programs
