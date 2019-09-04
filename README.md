@@ -1,2 +1,3 @@
 # tradegov_cons_screening_list_api
-Use the trade.gov Consolidated Screening List API for compliance testing from IBM i programs
+IBM i ILE RPG service program to use trade.gov Consolidated Screening List API for address verification
+from IBM i ILE programming languages.
