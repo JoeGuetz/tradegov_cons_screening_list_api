@@ -1,0 +1,7 @@
+000100140730             STRPGMEXP  LVLCHK(*NO)
+000200170329
+000300190901             EXPORT     SYMBOL(trdgovcsl_search_do)
+000400190901             EXPORT     SYMBOL(trdgovcsl_dispose)
+000500190903             EXPORT     SYMBOL(trdgovcsl_search_udtf)
+000600190609
+000700140613             ENDPGMEXP

@@ -17,11 +17,19 @@ Our policy is to store
 RPG in QRPGLESRC, DDS in QDDSSRC, CL in QCLPSRC, SRVPGM ExportDefs in QSRVSRC ... you get the idea!  
 
 First step:  
-Go to trade.gov website an apply for an ApiKey. Our apikey is stored in file-member IXPERTOSSS/QINCLUDELE,TRDGOVKEY  
+Go to trade.gov website and apply for an ApiKey. Our ApiKey is stored in file-member IXPERTOSSS/QINCLUDELE,TRDGOVKEY  
 This member is referenced in the test-program. Unless you either create the member (notice the library name with three S)  
 or remark the copy statement in the program, the program will not compile correctly! 
 
-Installation path 1:  
+Installation option 1:  
+Download the save file  
+Create a save file on your IBM i  
+e.g. CRTSAVF QGPL/IXPERTOSS  
+FTP the downloaded SAVF to the target using binary FTP  
+restore then SAVF to IXPERTOSS Lib  
+RSTLIB SAVLIB(IXPERTOSS) DEV(*SAVF) SAVF(QGPL/IXPERTOSS)   
+
+Installation option 2:  
 CRTLIB IXPERTOSS  
 CRTSRCPF FILE(IXPERTOSS/QRPGLESRC) RCDLEN(112)  
 CRTSRCPF FILE(IXPERTOSS/QINCLUDELE) RCDLEN(112)  
@@ -45,4 +53,6 @@ Create the SRVPGM (make sure to reference the ExportDefs!)
 CRTSRVPGM SRVPGM(IXPERTOSS/TRDGOVCSL) SRCFILE(IXPERTOSS/QSRVSRC)  
 
 Compile the test program T$TGSSRCH with SEU Option 14 on member IXPERTOSS/T$TGSSRCH  
-(remember to do something with the copy for the apikey) 
+(remember to do something with the copy statement for the apikey)  
+
+ 
