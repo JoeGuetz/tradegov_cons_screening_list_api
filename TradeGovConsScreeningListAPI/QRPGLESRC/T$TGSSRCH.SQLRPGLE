@@ -60,7 +60,7 @@
 006000190830     D  dbg            S              1
 006100190828
 006200190830      /free
-006300190830       dbg = *blanks;
+006300190904       dbg = *blanks;         //serves as debug breakpoint
 006400190828      /end-free
 006500190828
 006600190828     P                 E
