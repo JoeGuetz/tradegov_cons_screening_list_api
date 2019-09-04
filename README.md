@@ -21,20 +21,20 @@ Go to trade.gov website an apply for an ApiKey. Our apikey is stored in file-mem
 This member is referenced in the test-program. Unless you either create the member (notice the library name with three S)  
 or remark the copy statement in the program, the program will not compile correctly! 
 
-Installation path 1:
-CRTLIB IXPERTOSS
-CRTSRCPF FILE(IXPERTOSS/QRPGLESRC) RCDLEN(112)
-CRTSRCPF FILE(IXPERTOSS/QINCLUDELE) RCDLEN(112)
-CRTSRCPF FILE(IXPERTOSS/QSRVSRC) RCDLEN(112)
-CRTSRCPF FILE(IXPERTOSS/QSQLSRC) RCDLEN(112)
+Installation path 1:  
+CRTLIB IXPERTOSS  
+CRTSRCPF FILE(IXPERTOSS/QRPGLESRC) RCDLEN(112)  
+CRTSRCPF FILE(IXPERTOSS/QINCLUDELE) RCDLEN(112)  
+CRTSRCPF FILE(IXPERTOSS/QSRVSRC) RCDLEN(112)  
+CRTSRCPF FILE(IXPERTOSS/QSQLSRC) RCDLEN(112)  
 
-as a preliminary consideration also create
-CRTSRCPF FILE(IXPERTOSS/QDDSSRC) RCDLEN(112)
-CRTSRCPF FILE(IXPERTOSS/QCLPSRC) RCDLEN(112)
+as a preliminary consideration also create  
+CRTSRCPF FILE(IXPERTOSS/QDDSSRC) RCDLEN(112)  
+CRTSRCPF FILE(IXPERTOSS/QCLPSRC) RCDLEN(112)  
 
-transfer the source content from here to the according source members
-CHGCURLIB IXPERTOSS
-CRTBNDDIR IXPERTOSS/TRDGOVBND
+transfer the source content from here to the according source members  
+CHGCURLIB IXPERTOSS  
+CRTBNDDIR IXPERTOSS/TRDGOVBND  
 
 create a Binding Directory  
 ADDBNDDIRE BNDDIR(IXPERTOSS/TRDGOVBND) OBJ((*LIBL/TRDGOVCSL *SRVPGM))  
